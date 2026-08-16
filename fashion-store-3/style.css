@@ -1,0 +1,483 @@
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    /* Background */
+    background-color: #f7f7f7;
+
+    color: #222;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    /* Background */
+    background-color: #111;
+
+    color: white;
+
+    /* Border */
+    border-bottom: 3px solid #d4af37;
+}
+
+
+/* Logo */
+
+header h1 {
+
+    /* Text effect */
+    letter-spacing: 4px;
+
+    text-shadow: 2px 2px 5px #777;
+}
+
+
+/* Navigation */
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    /* Smooth transition */
+    transition: 0.3s;
+}
+
+
+/* Hover effect */
+
+nav a:hover {
+
+    color: #d4af37;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+
+    height: 450px;
+
+    /* Background with gradient */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+    /* Center the content */
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* Hero heading */
+
+.hero-content h2 {
+
+    font-size: 45px;
+
+    /* Text effect */
+    text-shadow: 3px 3px 6px black;
+
+    margin-bottom: 15px;
+
+    /* CSS animation */
+    animation: slideDown 1.5s ease;
+}
+
+
+/* Hero paragraph */
+
+.hero-content p {
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+
+    animation: fadeIn 2s ease;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+button {
+
+    padding: 12px 25px;
+
+    background-color: #111;
+
+    color: white;
+
+    /* Border */
+    border: 2px solid #111;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    /* Transition */
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+
+button:hover {
+
+    background-color: white;
+
+    color: #111;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   PRODUCT SECTION
+   ========================================= */
+
+.products {
+
+    padding: 50px 8%;
+
+    text-align: center;
+}
+
+
+.products > h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+
+    /* Text effect */
+    text-shadow: 2px 2px 3px #bbb;
+}
+
+
+/* =========================================
+   MULTIPLE COLUMN LAYOUT
+   ========================================= */
+
+.product-container {
+
+    display: grid;
+
+    /* Four columns */
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Product card */
+
+.product-card {
+
+    background-color: white;
+
+    padding: 20px;
+
+    /* Border */
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    /* Shadow */
+    box-shadow: 0 5px 12px #ccc;
+
+    /* Smooth animation */
+    transition: transform 0.3s;
+}
+
+
+/* Product card hover animation */
+
+.product-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #d4af37;
+}
+
+
+/* Product image */
+
+.product-image {
+
+    height: 180px;
+
+    background-color: #eee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 80px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Product name */
+
+.product-card h3 {
+
+    margin-bottom: 10px;
+}
+
+
+/* Product price */
+
+.price {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    color: #b8860b;
+}
+
+
+/* =========================================
+   OFFER SECTION
+   ========================================= */
+
+.offer {
+
+    text-align: center;
+
+    padding: 50px;
+
+    /* Background */
+    background: linear-gradient(
+        120deg,
+        #f8d7da,
+        #fff3cd
+    );
+
+    /* Border */
+    border-top: 3px solid #d4af37;
+
+    border-bottom: 3px solid #d4af37;
+}
+
+
+.offer h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+    /* Text effect */
+    text-shadow: 2px 2px 4px #999;
+
+    /* Animation */
+    animation: pulse 2s infinite;
+}
+
+
+.offer p {
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CSS ANIMATIONS
+   ========================================= */
+
+
+/* Heading animation */
+
+@keyframes slideDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-50px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* Paragraph animation */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+/* Offer animation */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.08);
+    }
+
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #111;
+
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* Three columns on smaller screens */
+
+    .product-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* Stack navigation */
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* One column on mobile */
+
+    .product-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 30px;
+    }
+
+}

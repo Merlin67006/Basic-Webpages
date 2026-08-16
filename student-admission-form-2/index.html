@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Admission Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img
+            src="C:\Users\vmerl\OneDrive\Programming Languages\HTML\Web-Tech\Assignment-1\student-admission-form-2\Screenshot 2026-08-16 190433.png" width="10%"   
+            alt="College Image"
+            class="college-image"
+        >
+
+        <h1>KPRIET Student Admission Form</h1>
+
+        <p class="subtitle">
+            Please enter your details carefully
+        </p>
+
+        <form>
+
+            <!-- Student Name -->
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+            >
+
+            <!-- Phone -->
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+            >
+
+            <!-- Date -->
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+
+            <!-- Password -->
+            <label for="password">Create Password</label>
+            <input type="password" id="password">
+
+            <!-- Gender -->
+            <label>Gender</label>
+
+            <div class="radio-group">
+                <input type="radio" name="gender" value="male">
+                <span>Male</span>
+
+                <input type="radio" name="gender" value="female">
+                <span>Female</span>
+            </div>
+
+            <!-- Course -->
+            <label for="course">Select Course</label>
+
+            <select id="course">
+                <option value="">-- Select Course --</option>
+                <option>Computer Science Engineering</option>
+                <option>Information Technology</option>
+                <option>Electronics and Communication</option>
+                <option>Mechanical Engineering</option>
+            </select>
+
+            <!-- Address -->
+            <label for="address">Address</label>
+
+            <textarea
+                id="address"
+                rows="4"
+                placeholder="Enter your address">
+            </textarea>
+
+            <!-- File upload -->
+            <label for="photo">Upload Photo</label>
+            <input type="file" id="photo">
+
+            <!-- Checkbox -->
+            <div class="checkbox">
+                <input type="checkbox" required>
+                <span>I agree to the terms and conditions</span>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit Application</button>
+
+        </form>
+
+        <!-- Media Elements -->
+<br>
+<br>
+        <h3>KPR INSTITUTE OF ENGINEERING AND TECHNOLOGY</h3>
+
+        <!-- Image -->
+        <img
+            src="C:\Users\vmerl\OneDrive\Programming Languages\HTML\Web-Tech\Assignment-1\student-admission-form-2\Screenshot 2026-08-16 185919.png"
+            alt="College Image"
+            class="college-image"
+        >
+
+        <!-- Video -->
+        <iframe
+    width="560"
+    height="315"
+    src="C:\Users\vmerl\OneDrive\Programming Languages\HTML\Web-Tech\Assignment-1\student-admission-form-2\Screen Recording 2026-08-16 222436.mp4"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
+
+    </div>
+
+</body>
+</html>

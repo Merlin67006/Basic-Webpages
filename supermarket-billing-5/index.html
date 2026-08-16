@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Supermarket Billing System</title>
+
+    
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Supermarket Billing</h1>
+
+        <!-- Product 1 -->
+        <div class="product">
+
+            <h3>Product 1</h3>
+
+            <label>Quantity</label>
+
+            <input
+                type="number"
+                id="quantity1"
+                min="1"
+                placeholder="Enter quantity"
+            >
+
+            <label>Unit Price (₹)</label>
+
+            <input
+                type="number"
+                id="price1"
+                min="0"
+                placeholder="Enter unit price"
+            >
+
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+
+            <h3>Product 2</h3>
+
+            <label>Quantity</label>
+
+            <input
+                type="number"
+                id="quantity2"
+                min="1"
+                placeholder="Enter quantity"
+            >
+
+            <label>Unit Price (₹)</label>
+
+            <input
+                type="number"
+                id="price2"
+                min="0"
+                placeholder="Enter unit price"
+            >
+
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+
+            <h3>Product 3</h3>
+
+            <label>Quantity</label>
+
+            <input
+                type="number"
+                id="quantity3"
+                min="1"
+                placeholder="Enter quantity"
+            >
+
+            <label>Unit Price (₹)</label>
+
+            <input
+                type="number"
+                id="price3"
+                min="0"
+                placeholder="Enter unit price"
+            >
+
+        </div>
+<br>
+<br>
+        <!-- Calculate button -->
+        <button onclick="generateBill()">
+            Generate Bill
+        </button>
+
+        <!-- Bill output -->
+        <div id="bill"></div>
+
+    </div>
+
+    <script>
+
+        /*
+         * User-defined function
+         * Calculates the complete bill.
+         */
+        function generateBill() {
+
+            // Get quantity and price of Product 1
+            let quantity1 = Number(
+                document.getElementById("quantity1").value
+            );
+
+            let price1 = Number(
+                document.getElementById("price1").value
+            );
+
+
+            // Get quantity and price of Product 2
+            let quantity2 = Number(
+                document.getElementById("quantity2").value
+            );
+
+            let price2 = Number(
+                document.getElementById("price2").value
+            );
+
+
+            // Get quantity and price of Product 3
+            let quantity3 = Number(
+                document.getElementById("quantity3").value
+            );
+
+            let price3 = Number(
+                document.getElementById("price3").value
+            );
+
+
+            /*
+             * Calculate individual product amounts.
+             *
+             * Multiplication operator is used here.
+             */
+            let amount1 = quantity1 * price1;
+
+            let amount2 = quantity2 * price2;
+
+            let amount3 = quantity3 * price3;
+
+
+            // Calculate total bill
+            let total = amount1 + amount2 + amount3;
+
+
+            // Initially discount is zero
+            let discount = 0;
+
+
+            /*
+             * Selection statement.
+             *
+             * If total is greater than ₹2000,
+             * 10% discount is applied.
+             */
+            if (total > 2000) {
+
+                discount = total * 0.10;
+
+            }
+
+
+            // Calculate final payable amount
+            let finalAmount = total - discount;
+
+
+            /*
+             * Display the complete bill.
+             */
+            document.getElementById("bill").innerHTML =
+
+                "<h2>Bill Summary</h2>" +
+
+                "Product 1: ₹" + amount1.toFixed(2) +
+                "<br>" +
+
+                "Product 2: ₹" + amount2.toFixed(2) +
+                "<br>" +
+
+                "Product 3: ₹" + amount3.toFixed(2) +
+                "<br><br>" +
+
+                "Total Amount: ₹" +
+                total.toFixed(2) +
+                "<br>" +
+
+                "Discount: ₹" +
+                discount.toFixed(2) +
+                "<br><br>" +
+
+                "<strong>Final Payable Amount: ₹" +
+                finalAmount.toFixed(2) +
+                "</strong>";
+
+        }
+
+    </script>
+
+</body>
+</html>
