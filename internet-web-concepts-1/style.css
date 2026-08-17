@@ -1,0 +1,86 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    margin: 0;
+    padding: 30px;
+    line-height: 1.6;}
+/* Main heading */
+h1 {
+    text-align: center;
+    color: #1a237e;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;}
+/* Section headings */
+h2 {
+    color: #1565c0;
+    border-left: 5px solid #1565c0;
+    padding-left: 10px;
+    margin-top: 30px;}
+/* Subheadings */
+h3 {
+    color: #2e7d32;}
+/* Paragraphs */
+p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;}
+/* Lists */
+ul,
+ol {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 8px;}
+/* Diagrams */
+pre {
+    background-color: #263238;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;}
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;}
+/* Table cells */
+th,
+td {
+    padding: 12px;
+    border: 1px solid #999;
+    text-align: left;}
+/* Table heading */
+th {
+    background-color: #1565c0;
+    color: white;}
+/* Table row hover effect */
+tr:hover {
+    background-color: #e3f2fd;}
+/* Horizontal line */
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #1565c0;
+    margin: 30px 0;}
+/* Bold text */
+b {
+    color: #c62828;}
+/* Conclusion */
+h3 + p {
+    border-left: 5px solid #2e7d32;}
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;}
+    h1 {
+        font-size: 25px;}
+    h2 {
+        font-size: 20px;}
+    table {
+        font-size: 14px;}
+    pre {
+        font-size: 12px;}}
